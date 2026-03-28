@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tame by Nature — Coming Soon</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400&display=swap');
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --brand-stone: #CBC6B8;
+      --brand-white: #FFFFFF;
+      --brand-dark: #2c2a27;
+      --brand-mid: #7a7670;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-color: var(--brand-white);
+      color: var(--brand-dark);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    /* Subtle textured background strip */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(160deg, var(--brand-stone) 0%, var(--brand-white) 55%);
+      opacity: 0.35;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .page-wrapper {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 680px;
+      width: 100%;
+      gap: 2.5rem;
+    }
+
+    /* Logo / wordmark area */
+    .brand-mark {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand-icon {
+      width: 64px;
+      height: 64px;
+      opacity: 0.85;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brand-dark);
+      line-height: 1;
+    }
+
+    .brand-tagline {
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--brand-mid);
+    }
+
+    /* Divider */
+    .divider {
+      width: 60px;
+      height: 1px;
+      background-color: var(--brand-stone);
+    }
+
+    /* Coming soon block */
+    .coming-soon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .coming-soon__label {
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--brand-mid);
+    }
+
+    .coming-soon__headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.2rem, 3.5vw, 1.75rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--brand-dark);
+      line-height: 1.5;
+    }
+
+    .coming-soon__body {
+      font-size: 0.82rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      color: var(--brand-mid);
+      line-height: 1.8;
+      max-width: 420px;
+    }
+
+    /* CTA link */
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--brand-dark);
+      border: 1px solid var(--brand-stone);
+      padding: 0.85rem 2rem;
+      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .cta-link:hover,
+    .cta-link:focus-visible {
+      background-color: var(--brand-stone);
+      border-color: var(--brand-stone);
+      color: var(--brand-dark);
+      outline: none;
+    }
+
+    .cta-link svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      transition: transform 0.25s ease;
+    }
+
+    .cta-link:hover svg,
+    .cta-link:focus-visible svg {
+      transform: translateX(3px);
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 1;
+      margin-top: auto;
+      padding: 1.5rem 2rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brand-stone);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Brand mark -->
+    <div class="brand-mark">
+      <!-- Minimal leaf / nature SVG icon -->
+      <svg class="brand-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M32 56 C32 56 10 44 10 26 C10 14 20 8 32 8 C44 8 54 14 54 26 C54 44 32 56 32 56Z"
+              fill="#CBC6B8" opacity="0.5"/>
+        <path d="M32 56 C32 56 10 44 10 26 C10 14 20 8 32 8 C44 8 54 14 54 26 C54 44 32 56 32 56Z"
+              stroke="#CBC6B8" stroke-width="1.2" fill="none"/>
+        <line x1="32" y1="56" x2="32" y2="16" stroke="#2c2a27" stroke-width="0.8" opacity="0.4"/>
+        <path d="M32 30 C22 26 16 30 14 38" stroke="#2c2a27" stroke-width="0.8" fill="none" opacity="0.4"/>
+        <path d="M32 38 C42 34 48 38 50 46" stroke="#2c2a27" stroke-width="0.8" fill="none" opacity="0.4"/>
+      </svg>
+
+      <h1 class="brand-name">Tame by Nature</h1>
+      <p class="brand-tagline">A new era begins</p>
+    </div>
+
+    <div class="divider" role="separator"></div>
+
+    <!-- Coming soon content -->
+    <div class="coming-soon">
+      <span class="coming-soon__label">Coming Soon</span>
+      <p class="coming-soon__headline">Something beautiful is on its way.</p>
+      <p class="coming-soon__body">
+        We're crafting something special. Our new brand, Tame by Nature,
+        will be launching soon. In the meantime, visit our current home.
+      </p>
+    </div>
+
+    <!-- CTA -->
+    <a class="cta-link" href="https://www.namoetal.com" target="_blank" rel="noopener noreferrer">
+      Visit Namoetal
+      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M1 7H13M7 1L13 7L7 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+
+  </div>
+
+  <footer>
+    &copy; <span id="yr"></span> Tame by Nature. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
